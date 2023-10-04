@@ -1,0 +1,204 @@
+/* */
+
+
+/* styles.css */
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+} */
+
+/* @media (max-width: 768px) {
+  /* CSS rules for screens up to 768px wide */
+
+/* Styles for screens smaller than 768 pixels wide */
+
+header {
+  background-color: #2a1c7a;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 245px;
+  /* Adjust the width of your logo */
+  height: 90px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-top: 25px;
+  padding-right: 20px;
+  height: 70px;
+  display: flex;
+  vertical-align: middle;
+  color: black;
+  flex-direction: row-reverse;
+  font-size: large;
+}
+
+nav ul li {
+  margin-right: 20px;
+  /* Add spacing between navigation items */
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+/* Style the navigation links on hover (optional) */
+nav a:hover {
+  color: #ffcc00;
+  /* Change the color on hover */
+}
+
+.main-layout {
+  height: 600px;
+  width: 100%;
+
+}
+
+.white_bg {
+  height: 520px;
+  width: 97%;
+  margin: 20px 30px;
+  /* padding: 0px 600px; */
+  background-color: white;
+  border-radius: 15px;
+}
+
+.text-bg {
+  padding-top: 80px;
+
+}
+
+.text-bg span {
+  font-weight: 600;
+  font-size: 40px;
+  text-align: left;
+  line-height: 50px;
+  color: #ffcc00;
+}
+
+.text-bg h1 {
+  font-size: 66px;
+  color: black;
+  line-height: 70px;
+  font-weight: 500;
+
+}
+
+.text-bg p {
+  line-height: 28px;
+  display: block;
+  margin-left: 5px;
+  color: black;
+  font-size: 17px;
+  padding-bottom: 20px;
+}
+
+.read_more {
+  font-size: 16px;
+  background-color: #17094c;
+  max-width: 160px;
+  width: 100%;
+  color: #fff !important;
+  display: block;
+  border-radius: 7px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  padding: 15px 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+}
+
+.text-bg .read_more {
+  max-width: 200px;
+}
+
+.read_more:hover {
+  background-color: #ffcc00;
+}
+
+.text_img figure img {
+  width: 85%;
+}
+
+.text_img figure {
+  margin: 20px;
+  padding-top: 25px;
+}
+
+.about {
+  background: url(../Main/css/abo_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 65px;
+}
+
+.about .titlepage {
+  text-align: left;
+}
+
+.about_img {
+  padding-right: 30px;
+}
+
+.about_img figure {
+  margin: 0;
+}
+
+.about_img figure img {
+  width: 100%;
+}
+
+.titlepage p {
+  /* font-size: 17px; */
+  /* padding-top: 15px; */
+  line-height: 35px;
+  color: #4a4a49;
+  text-align: left;
+  font-size: 20px;
+  color: #090a0b;
+  padding-top: 30px;
+  display: inline-block;
+}
+
+.about .read_more {
+  margin-top: 50px;
+}
+
+.titlepage {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.titlepage h2 {
+  font-size: 45px;
+  color: #202020;
+  line-height: 40px;
+  font-weight: normal;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.yellow {
+  color: #fbca47;
+  font-size: 17px;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+.d_flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

@@ -3,61 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Wallet</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .login-container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
-        input {
-            width: 100%;
-            padding: 10px;
-            margin: 5px 0;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 3px;
-            cursor: pointer;
-        }
-    </style>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/Styles.css">
 </head>
-<body background="photos/pic.png">
-    <div class="login-container">
-       
-        <h1>Log in</h1>
-        <form>
-            <input type="text" placeholder="Username" style="width: 300px;" required>
-            <br>
-            <input type="password" placeholder="Password" style="width: 300px;" required>
-            <br>
-            <a href="reset.html" style="margin-right:60%; font-size: 12px;">Forgot Password ?</a>
-            <br>
-            <br>
-            <button type="submit">Login</button>
-            <br>
-            
-        </form>
-        
-        <br>
-        <a href="create.html">Create Account</a>
+<body>
+  <!-- login hover -->
+  <div class="form-section">
+    <div class="switch" id="switch">
+      <div class="row">
+        <img class="logo" src="images/Walletlogoonly.png" alt="logo logo" />
+      </div>
+        <h4 style="text-align: center;">
+        Welcome to Wallet Ace
+        </h4>
     </div>
+    <div class="login-form center">
+      <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
+      <h1>Sign Up</h1>
+      <label for="">Email:</label>
+      <input class="form-input" type="text" />
+      <label for="">Password:</label>
+      <input class="form-input" type="password" />
+      <label for="">Password repeat:</label>
+      <input class="form-input" type="password" />
+      <button class="btn-switch green">Sign Up</button>
+      <p>
+        Already have an account?<span class="register-link" id="login"
+          >Login</span
+        >
+      </p>
+    </div>
+    <div class="signup-form center">
+      <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
+      <h1>Login</h1>
+
+      <label for="">Email:</label>
+      <input class="form-input" type="text" />
+      <label for="">Password:</label>
+      <input class="form-input" type="password" />
+      <button class="btn-switch">Login</button>
+      <p>
+        Don't have account yet?<span class="register-link" id="signup"
+          >Register</span
+        >
+      </p>
+    </div>
+  </div>
+  <!-- login over -->
+  <script src="script.js"></script>
 </body>
 </html>
