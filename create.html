@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 21px;
+            cursor: pointer;
+        }
+
+        .card-form {
+            width: 300px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+        }
+
+        input[type="text"], input[type="number"], input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-actions {
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-form">
+        <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
+        <script>
+            function closeWindowAndRedirect() {
+                window.close();
+                window.location.href = "Dashboard.html";
+            }
+        </script>
+        <h2 style="text-align: center;">Add Details</h2>
+        <br>
+        <form>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="cardHolderName">Account Name :</label>
+                    <br>
+                    <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Name" style="width: 280px;" required>
+                    <br>
+                    <br>
+                </div>
+                <label for="cardNumber">Intial Balance :</label>
+                <br>
+                <input type="text" id="cardNumber" name="cardNumber" placeholder="Rupees" style="width: 280px;" required>
+                <br>
+                <br>
+            </div>
+
+            <div class="form-group">
+                <label>Include in stats : </label>
+                <br>
+                <select name="stats" id="stats" style="width: 300px;height: 40px;">
+                    <option value="">Yes</option>
+                    <option value="">No</option>
+                </select>
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="cardHolderName">Bank IFSC code :</label>
+                <br>
+                <input type="text" id="cardHolderName" name="cardHolderName" placeholder="IFSC code" style="width: 280px;" required>
+                <br>
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="cardHolderName">CardCVV Number :</label>
+                <br>
+                <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Last Three Digite" style="width: 280px;" required>
+                <br>
+                <br>
+            </div>
+
+            <div class="form-group">
+                <label for="expiryDate">Expiry Date :</label>
+                <br>
+                <input type="date" id="expiryDate" name="expiryDate" style="width: 280px;" required>
+                <br>
+                <br>
+            </div> -->
+            <div class="form-actions">
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
