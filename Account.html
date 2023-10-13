@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/Account.css">
+    <title>Wallet Ace</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="Dashboard.html" class="logo">
+            <i class='bx bx-code-alt'></i>
+            <div class="logo-name"><span>Wallet</span>Ace</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="Dashboard.html"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li class="active"><a href="#" onclick="myaccount()"><i class='bx bx-store-alt'></i>Accounts</a></li>
+            <li><a href="Split.html" onclick="mysplit()"><i class='bx bx-analyse'></i>Split Bills</a></li>
+            <li><a href="budget.html"><i class='bx bx-cog'></i>Analysis</a></li>
+            <!-- <li><a href="profile.html" onclick="myprofile()"><i class='bx bx-group'></i>Profile</a></li> -->
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="#" class="logout" onclick="mylogout()">
+
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <!-- <div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+				</div> -->
+            </form>
+            <!-- <input type="checkbox" id="theme-toggle" hidden>
+			<label for="theme-toggle" class="theme-toggle"></label> -->
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="images/logo.png">
+            </a>
+        </nav>
+        <main>
+            <div class="header">
+                <div class="left">
+                    <!-- <h1>Dashboard</h1> -->
+                    <ul class="breadcrumb">
+                        <li><a href="Dashboard.html">
+                                Hey User
+                            </a></li>
+                        /
+                        <li class="active">Account</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Insights -->
+            <ul class="insights">
+                <li style="text-align: center;">
+                    <span>
+                        <p>Accounts</p>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <p>Transaction History</p>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <p>Statements</p>
+                    </span>
+                </li>
+                <li>
+                    <span>
+                        <p>Create Budget</p>
+                    </span>
+                </li>
+            </ul>
+
+            <div class="bottom-data">
+                <div class="orders">
+                </div>
+
+                <!-- Reminders -->
+
+                <!-- End of Reminders-->
+
+            </div>
+
+        </main>
+    </div>
+
+    <script src="JS/Account.js"></script>
+
+</body>
+
+</html>

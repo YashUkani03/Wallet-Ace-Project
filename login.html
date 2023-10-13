@@ -1,55 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/Styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+  <link rel="stylesheet" href="css/Styles.css">
 </head>
-<body>
+
+<body onload="pageLoad()">
   <!-- login hover -->
   <div class="form-section">
     <div class="switch" id="switch">
       <div class="row">
         <img class="logo" src="images/Walletlogoonly.png" alt="logo logo" />
       </div>
-        <h4 style="text-align: center;">
+      <h4 style="text-align: center;">
         Welcome to Wallet Ace
-        </h4>
+      </h4>
     </div>
     <div class="login-form center">
       <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
       <h1>Sign Up</h1>
-      <label for="">Email:</label>
-      <input class="form-input" type="text" />
-      <label for="">Password:</label>
-      <input class="form-input" type="password" />
-      <label for="">Password repeat:</label>
-      <input class="form-input" type="password" />
-      <button class="btn-switch green">Sign Up</button>
-      <p>
-        Already have an account?<span class="register-link" id="login"
-          >Login</span
-        >
-      </p>
-    </div>
-    <div class="signup-form center">
-      <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
-      <h1>Login</h1>
+      <!-- <label for="">Email:</label> -->
+      <input class="form-input" type="text" required placeholder="Email" id="sEmail" />
+      <!-- <label for="">Password:</label> -->
+      <input class="form-input" type="password" required placeholder="Password" id="sPassword" />
 
-      <label for="">Email:</label>
-      <input class="form-input" type="text" />
-      <label for="">Password:</label>
-      <input class="form-input" type="password" />
-      <button class="btn-switch">Login</button>
+      <!-- <label for="">Confirm Password:</label> -->
+      <input class="form-input" type="password" placeholder="Confirm password" id="sConfirmPassword" />
+      <button class="btn-switch green" onclick="register()">Sign Up</button>
       <p>
-        Don't have account yet?<span class="register-link" id="signup"
-          >Register</span
-        >
+        Already have an account?<span class="register-link" id="login">Login</span>
       </p>
     </div>
+    <div class="signup-form center" id="loginForm">
+      <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
+      <h1>Login </h1>
+
+      <!-- <label for="">Email:</label>0 -->
+      <input class="form-input" type="email" id="txtEmail" placeholder="Email" />
+      <!-- <label for="">Password:</label> -->
+      <input class="form-input" type="password" id="txtPass" placeholder="Password" />
+      <button class="btn-switch" onclick="mylogin()">Login</button>
+      <p>
+        Don't have account yet?<span class="register-link" id="signup">Register</span>
+      </p>
+    </div>
+    <div id="error-message"></div>
   </div>
+
   <!-- login over -->
-  <script src="script.js"></script>
+  <script src="JS/scripts.js"></script>
+  <script>
+    function mylogin() {
+      const email = document.getElementById("txtEmail").value;
+      const pass = document.getElementById("txtPass").value;
+      if (!email) {
+        swal("Please write valid mail");
+        return true;
+      } else if (!pass) {
+        alert("Please write password");
+        return true;
+      }
+      const getEmail = localStorage.getItem('email');
+      const getPwd = localStorage.getItem('pwd');
+      if (String(email).trim() === String(getEmail).trim() && String(pass).trim() === String(getPwd).trim()) {
+        location.href = '/Dashboard.html';
+      } else {
+        alert("Invalid your email/password");
+      }
+    }
+    function register() {
+      const email = document.getElementById("sEmail").value;
+      const sPassword = document.getElementById("sPassword").value;
+      const sConfirmPassword = document.getElementById("sConfirmPassword").value;
+      if (!String(email).trim()) {
+        alert("Please write valid mail");
+        return true;
+      } else if (!String(sPassword).trim()) {
+        alert("Please write password");
+        return true;
+      } else if (!String(sConfirmPassword).trim()) {
+        alert("Please write confirm password");
+        return true;
+      }
+
+      if (String(sPassword).trim() === String(sConfirmPassword).trim()) {
+        localStorage.setItem('email', email);
+        localStorage.setItem('pwd', sPassword);
+        location.href = 'login.html'
+      } else {
+        alert("Your password miss match");
+        return true;
+      }
+    }
+      
+    
+
+  </script>
 </body>
+
 </html>

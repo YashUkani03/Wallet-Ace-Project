@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/split.css">
+    <title>Wallet Ace</title>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html" class="logo">
+            <i class='bx bx-code-alt'></i>
+            <div class="logo-name"><span>Wallet</span>Ace</div>
+        </a>
+        <ul class="side-menu">
+            <li><a href="Dashboard.html"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="Account.html" onclick="myaccount()"><i class='bx bx-store-alt'></i>Accounts</a></li>
+            <li class="active"><a href="split.html" onclick="mysplit()"><i class='bx bx-analyse'></i>Split Bills</a></li>
+            <li><a href="budget.html" onclick="mybudget()"><i class='bx bx-cog'></i>Analysis</a></li>
+            <!-- <li><a href="#"><i class='bx bx-message-square-dots'></i>Tickets</a></li> -->
+            <!-- <li><a href="profile.html" onclick="myprofile()"><i class='bx bx-group'></i>Profile</a></li> -->
+        </ul>
+        <ul class="side-menu">
+            <li>
+                <a href="index.html" class="logout" onclick="mylogout()">
+
+                    <i class='bx bx-log-out-circle'></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- End of Sidebar -->
+
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Navbar -->
+        <nav>
+            <i class='bx bx-menu'></i>
+            <form action="#">
+                <!-- <div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+				</div> -->
+            </form>
+            <!-- <input type="checkbox" id="theme-toggle" hidden>
+			<label for="theme-toggle" class="theme-toggle"></label> -->
+            <a href="#" class="notif">
+                <i class='bx bx-bell'></i>
+                <span class="count">12</span>
+            </a>
+            <a href="#" class="profile">
+                <img src="images/logo.png">
+            </a>
+        </nav>
+        <main>
+            <div class="header">
+                <div class="left">
+                    <!-- <h1>Dashboard</h1> -->
+                    <ul class="breadcrumb">
+                        <li><a href="Dashboard.html">
+                                Dashboard
+                            </a></li>
+                        /
+                        <li class="active">Split Bills</a></li>
+                    </ul>
+                </div>
+                <!-- <a href="#" class="report"> -->
+                <!-- <i class='bx bx-cloud-download'></i> -->
+                <!-- <span>Download CSV</span> -->
+                <!-- </a> -->
+            </div>
+
+            <!-- Insights -->
+            <ul class="insights">
+                <li>
+                    <label for="Number">
+                        <h3>Total Amount:</h3>
+                    </label>
+                    <input type="text" id="Number" name="Number" required placeholder="Enter Amount">
+                </li>
+                <li>
+                    <label for="Number">
+                        <h3>Split Members:</h3>
+                    </label>
+                    <!-- <select name="Number" id="Member" > -->
+                    <!-- <option value="1">Select Any One</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option> -->
+                    <!-- <option value="4+">4+</option> -->
+                    <!-- </select> -->
+                    <input type="text" id="Number3" name="Number" required placeholder="Enter Members">
+                </li>
+                <li>
+                    <label for="Number">
+                        <h3>Split Amount:</h3>
+                    </label>
+                    <input type="text" id="Number2">
+                </li>
+
+        </main>
+    </div>
+
+    <script src="JS/script.js"></script>
+</body>
+
+</html>

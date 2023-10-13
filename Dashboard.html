@@ -4,34 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    
+    <link rel="stylesheet" href="css/dashboard.css">
+    <title>Wallet Ace</title>
 </head>
 
 <body>
+
+    <!-- Sidebar -->
     <div class="sidebar">
-        <a href="#" class="logo">
-            <img src="images/Walletlogoonly.png" alt="" width="30px" height="25px">
+        <a href="Dashboard.html" class="logo">
+            <i class='bx bx-code-alt'></i>
             <div class="logo-name"><span>Wallet</span>Ace</div>
         </a>
         <ul class="side-menu">
-            <li><a href="#"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
-            <li><a href="#"><i class='bx bx-store-alt'></i>Accounts</a></li>
-            <li class="active"><a href="#"><i class='bx bx-analyse'></i>Split Payments</a></li>
-            <li><a href="#"><i class='bx bx-message-square-dots'></i>Budget</a></li>
-            <!-- <li><a href="#"><i class='bx bx-group'></i></a></li> -->
-            <!-- <li><a href="#"><i class='bx bx-cog'></i>Settings</a></li> -->
+            <li class="active"><a href="#"><i class='bx bxs-dashboard'></i>Dashboard</a></li>
+            <li><a href="Account.html" onclick="myaccount()"><i class='bx bx-store-alt'></i>Accounts</a></li>
+            <li><a href="Split.html" onclick="mysplit()"><i class='bx bx-analyse'></i>Split Bills</a></li>
+            <li><a href="budget.html"><i class='bx bx-cog'></i>Analysis</a></li>
+            <!-- <li><a href="profile.html" onclick="myprofile()"><i class='bx bx-group'></i>Profile</a></li> -->
         </ul>
         <ul class="side-menu">
             <li>
-                <a href="#" class="logout">
+                <a href="#" class="logout" onclick="mylogout()">
+
                     <i class='bx bx-log-out-circle'></i>
                     Logout
                 </a>
@@ -39,82 +38,64 @@
         </ul>
     </div>
     <!-- End of Sidebar -->
+
     <!-- Main Content -->
     <div class="content">
         <!-- Navbar -->
         <nav>
             <i class='bx bx-menu'></i>
-            <!-- <form action="#"> -->
-                <!-- <div class="form-input"> -->
-                    <!-- <input type="search" placeholder="Search..."> -->
-                    <!-- <button class="search-btn" type="submit"><i class='bx bx-search'></i></button> -->
-                <!-- </div> -->
-            <!-- </form>  -->
-            <!-- <input type="checkbox" id="theme-toggle" hidden> -->
-            <!-- <label for="theme-toggle" class="theme-toggle"></label> -->
+            <form action="#">
+                <!-- <div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button class="search-btn" type="submit"><i class='bx bx-search'></i></button>
+				</div> -->
+            </form>
+            <!-- <input type="checkbox" id="theme-toggle" hidden>
+			<label for="theme-toggle" class="theme-toggle"></label> -->
             <a href="#" class="notif">
                 <i class='bx bx-bell'></i>
                 <span class="count">12</span>
             </a>
             <a href="#" class="profile">
-                <i class='bx bx-plus-circle'></i>
-                <!-- <img src="images/Walletlogoonly.png"> -->
+                <img src="images/logo.png">
             </a>
         </nav>
-
         <main>
             <div class="header">
                 <div class="left">
-                    <h1>Wallet Ace</h1>
+                    <!-- <h1>Dashboard</h1> -->
                     <ul class="breadcrumb">
-                        <li><a href="#">
-                                Dashboard
+                        <li><a href="Dashboard.html">
+                                Hey User
                             </a></li>
                         /
-                        <li><a href="#" class="active">Split Payments</a></li>
+                        <li class="active">Dashboard</a></li>
                     </ul>
                 </div>
-                <a href="#" class="report">
-                    <i class='bx bx-cloud-download'></i>
-                    <span>Download CSV</span>
-                </a>
             </div>
+
             <!-- Insights -->
             <ul class="insights">
                 <li>
-                    <!-- <i class='bx bx-calendar-check'></i>
-                     -->
-                    <h2>Accounts</h2>
-                    <!-- <span class="info"> -->
-                        <!-- <h3>
-                            5000/-
-                        </h3>
-                        <p>Paid Order</p> -->
-                    <!-- </span> -->
-                </li>
-                <li><i class='bx bx-show-alt'></i>
+                    <!-- <i class='bx bx-calendar-check'></i> -->
                     <span class="info">
                         <h3>
-                            3,944
+                            Cash
                         </h3>
-                        <p>Site Visit</p>
+                        <p> 5000/- </p>
                     </span>
                 </li>
-                <li><i class='bx bx-line-chart'></i>
+                <li style="justify-content: center;">
+                    <!-- <i class='bx bx-show-alt'></i> -->
+                    <i class='bx bx-plus-circle'></i><br>
+                    <!-- <h4>Create Account</h4> -->
                     <span class="info">
-                        <h3>
-                            14,721
-                        </h3>
-                        <p>Searches</p>
+                        <h4>
+                            Create Account
+                        </h4>
+                        <!-- <p style="text-align: center;"></p> -->
                     </span>
                 </li>
-                <li><i class='bx bx-dollar-circle'></i>
-                    <span class="info">
-                        <h3>
-                            $6,742
-                        </h3>
-                        <p>Total Sales</p>
-                    </span>
                 </li>
             </ul>
 
@@ -122,7 +103,7 @@
                 <div class="orders">
                     <div class="header">
                         <i class='bx bx-receipt'></i>
-                        <h3>Recent Orders</h3>
+                        <h3>Recent Activites</h3>
                         <i class='bx bx-filter'></i>
                         <i class='bx bx-search'></i>
                     </div>
@@ -130,6 +111,7 @@
                         <thead>
                             <tr>
                                 <th>User</th>
+                                <th>Amount</th>
                                 <th>Order Date</th>
                                 <th>Status</th>
                             </tr>
@@ -138,24 +120,27 @@
                             <tr>
                                 <td>
                                     <img src="images/profile-1.jpg">
-                                    <p>John Doe</p>
+                                    <p>Pruthu Vanara</p>
                                 </td>
+                                <td>5000/-</td>
                                 <td>14-08-2023</td>
                                 <td><span class="status completed">Completed</span></td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/profile-1.jpg">
-                                    <p>John Doe</p>
+                                    <p>Jenil Vekariya</p>
                                 </td>
+                                <td>8396</td>
                                 <td>14-08-2023</td>
                                 <td><span class="status pending">Pending</span></td>
                             </tr>
                             <tr>
                                 <td>
                                     <img src="images/profile-1.jpg">
-                                    <p>John Doe</p>
+                                    <p>Akhil Viradiya</p>
                                 </td>
+                                <td>7736</td>
                                 <td>14-08-2023</td>
                                 <td><span class="status process">Processing</span></td>
                             </tr>
@@ -167,29 +152,29 @@
                 <div class="reminders">
                     <div class="header">
                         <i class='bx bx-note'></i>
-                        <h3>Remiders</h3>
+                        <h3>Categories</h3>
                         <i class='bx bx-filter'></i>
                         <i class='bx bx-plus'></i>
                     </div>
                     <ul class="task-list">
                         <li class="completed">
                             <div class="task-title">
-                                <i class='bx bx-check-circle'></i>
-                                <p>Start Our Meeting</p>
+                                <i class='bx bxs-shopping-bags'></i>
+                                <p>Groceries</p>
                             </div>
                             <i class='bx bx-dots-vertical-rounded'></i>
                         </li>
                         <li class="completed">
                             <div class="task-title">
-                                <i class='bx bx-check-circle'></i>
-                                <p>Analyse Our Site</p>
+                                <i class='bx bx-movie'></i>
+                                <p>Entertainment</p>
                             </div>
                             <i class='bx bx-dots-vertical-rounded'></i>
                         </li>
                         <li class="not-completed">
                             <div class="task-title">
-                                <i class='bx bx-x-circle'></i>
-                                <p>Play Footbal</p>
+                                <i class='bx bx-plus'></i>
+                                <p>Add Categories</p>
                             </div>
                             <i class='bx bx-dots-vertical-rounded'></i>
                         </li>
@@ -201,12 +186,24 @@
             </div>
 
         </main>
-
     </div>
 
+    <script src="JS/script.js"></script>
+    <script>
+        function pageLoad() {
+            const getEmail = localStorage.getItem('email');
+            const getPassword = localStorage.getItem('pwd');
 
-
-    <script src="script.js"></script>        
+            if (!getEmail || !getPassword) {
+                location.href = '/Main/login.html';
+                return true;
+            }
+        }
+        function mylogout() {
+            localStorage.clear();
+            location.href = '/login.html';
+        }
+    </script>
 </body>
 
 </html>
