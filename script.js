@@ -113,3 +113,48 @@ toggler.addEventListener('change', function () {
         document.body.classList.remove('dark');
     }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const signupForm = document.getElementById("signup-form");
+    const message = document.getElementById("message");
+
+    signupForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const username = document.getElementById("sName").value;
+        const email = document.getElementById("sEmail").value;
+        const password = document.getElementById("sPassword").value;
+        const cpassword = document.getElementById("sConfirmPassword").value;
+
+        if(password==cpassword){
+            try {
+                const response = await fetch('http://127.0.0.1:3000/api/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ username, email, password })
+                });
+    
+                const data = await response.json();
+    
+                if (response.status === 201) {
+                    message.textContent = data.message;
+                    message.classList.remove('hidden');
+                } else {
+                    message.textContent = 'Signup failed. Please try again.';
+                    message.classList.remove('hidden');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                message.textContent = 'An error occurred. Please try again later.';
+                message.classList.remove('hidden');
+            }
+        }
+        else{
+            message.textContent = 'Please chech both passwords.';
+            message.classList.remove('hidden');
+        }
+        
+    });
+});

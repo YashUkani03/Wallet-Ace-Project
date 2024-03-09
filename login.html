@@ -8,6 +8,7 @@
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
   <link rel="stylesheet" href="css/Styles.css">
+  <link rel="icon" type="image/x-icon" href="/images/Walletlogoonly.png">
 </head>
 
 <body onload="pageLoad()">
@@ -21,21 +22,28 @@
         Welcome to Wallet Ace
       </h4>
     </div>
-    <div class="login-form center">
+    <div class="login-form center" id="signup-form">
       <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
       <h1>Sign Up</h1>
+      <!-- <form id="signup-form"> -->
       <!-- <label for="">Email:</label> -->
-      <input class="form-input" type="text" required placeholder="Email" id="sEmail" />
+      <input class="form-input" type="text" required placeholder="Username" id="sName" />
+
+      <input class="form-input" type="email" required placeholder="Email" id="sEmail" />
       <!-- <label for="">Password:</label> -->
       <input class="form-input" type="password" required placeholder="Password" id="sPassword" />
 
       <!-- <label for="">Confirm Password:</label> -->
       <input class="form-input" type="password" placeholder="Confirm password" id="sConfirmPassword" />
-      <button class="btn-switch green" onclick="register()">Sign Up</button>
+      <button type="submit" class="btn-switch green" onclick="register()">Sign Up</button>
+      <!-- </form> -->
+      <p id="message" class="hidden"></p>
       <p>
         Already have an account?<span class="register-link" id="login">Login</span>
       </p>
+      
     </div>
+    
     <div class="signup-form center" id="loginForm">
       <div onclick="closeWindowAndRedirect()" class="close-button">🗙</div>
       <h1>Login </h1>
